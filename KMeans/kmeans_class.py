@@ -32,13 +32,13 @@ class KMeans:
             * data: (np.array) - Data to perform clustering on.
             * k: (int) - The number of cluster centers.
             * random_seed: (int) - Set for reproducibility. Used in generating initial random cluster centers.
-            * max_iters: (int) - The max the number of interations.
+            * max_iters: (int) - The max number of interations.
             * clusters: (dict) - Container for current cluster assignments.
             * silhouette_scores: (dict) - Container for the silhouette scores of each point.
             * distance_metric: (callable) - Distance metric function
             * simplified_silhouette_scores - (dict) - Container for the simplified silhouette scores.
             * predictions: (dict) - Container for predictions on new data from fit model.
-            * intertia: (float) - The intertia, sum of the distance form each point the its cluster center.
+            * intertia: (float) - The intertia, sum of the distance from each point the its cluster center.
 
         Methods:
             * fit
@@ -169,7 +169,7 @@ class KMeans:
 
     def euclidean(self, p_1:np.array, p_2:np.array) -> float:
         """  
-        Eclidean distance metric
+        Euclidean distance metric
 
         Args:
             * p_1: (np.array) - A vector of coordinates.
@@ -238,13 +238,13 @@ class KMeans:
 ###############################################################################################################################################
     def find_best_k(self, k_list:list = [2, 3, 4, 5, 6, 7, 8, 9, 10]) -> None:
         """  
-        Instaniates KMEAN for each value of k and tracking interia and plotting results. The elbow in the resultant
-        value is the best value to use as k when instaniating final model.
+        Instantiates KMEANs for each value of k, tracking interia and plotting results. The elbow in the resultant
+        plot is the best value to use as k when instaniating final model.
 
         Args:
             * k_list: (list) - (Optional) List of k values to check. Default =  [2, 3, 4, 5, 6, 7, 8, 9, 10]
         """
-        # Container for results; k values the resultant intertia score
+        # Container for results; k values, and the resultant intertia score
         results_dict = {
                         "k": [],
                         "inertia": []

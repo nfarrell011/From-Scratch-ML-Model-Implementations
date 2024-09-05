@@ -2,7 +2,7 @@
 ___
 
 ### Overview
-This folder contains modules of various machine learning models. Within each module is a class, i.e., ```model.py``` which contains a model class, i.e., the model implementation.  
+This folder contains modules of various machine learning models. Within each module is a class, i.e., ```model_name_class.py``` which contains a model class, i.e., the model implementation.  
 
 Each model is implemented using only ```pandas```, ```matplotlib```, and basic ```numpy``` operations, i.e., no signnificant use of ```numpy``` functions.
 
